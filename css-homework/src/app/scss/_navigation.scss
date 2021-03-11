@@ -1,0 +1,33 @@
+// local variables
+$nav-item_width: 100%;
+$nav-item_width_desktop: auto;
+$nav-item_padding: 16px 20px;
+
+
+// navigation wrapper
+.main-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: var(--nav_primary-color);
+
+  // navigation item
+  &__item {
+    width: $nav-item_width;
+    padding: $nav-item_padding;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    color: var(--nav_text-color);
+
+    // mq
+    @include breakpoint('sm') {
+      width: $nav-item_width_desktop;
+    }
+
+    // hover state
+    &:hover {
+      background-color: var(--nav_hover-color);
+    }
+  }
+}
